@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /~sylee/courses/dataStructures/code/applications</title>
+ </head>
+ <body>
+<h1>Index of /~sylee/courses/dataStructures/code/applications</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=A">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th><th><a href="?C=D;O=D">Description</a></th></tr>
+   <tr><th colspan="5"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/~sylee/courses/dataStructures/code/">Parent Directory</a></td><td>&nbsp;</td><td align="right">  - </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BestFit.java">BestFit.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">2.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BinSort.java">BinSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BinarySearch.java">BinarySearch.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="BubbleSort.java">BubbleSort.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ChainWithBinSort.java">ChainWithBinSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Chessboard.java">Chessboard.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ClosestPoints.java">ClosestPoints.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">6.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Compress.java">Compress.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Container.java">Container.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">563 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ConvertSortTimes.java">ConvertSortTimes.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="CrossingDistribution.java">CrossingDistribution.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Currency.java">Currency.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">5.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Currency2.java">Currency2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">5.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="CurrencyAsLong.java">CurrencyAsLong.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">5.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Decompress.java">Decompress.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="EarlyTerminatingBubbleSort.java">EarlyTerminatingBubbleSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="EarlyTerminatingSelectionSort.java">EarlyTerminatingSelectionSort.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">1.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="EquivNode.java">EquivNode.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">440 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="EvaluatePolynomial.java">EvaluatePolynomial.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FIFOBBLoading1.java">FIFOBBLoading1.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FIFOBBLoading2.java">FIFOBBLoading2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FIFOBBLoading3.java">FIFOBBLoading3.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FastUnionFind.java">FastUnionFind.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="FirstFit.java">FirstFit.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="GreedyLoading.java">GreedyLoading.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="HeapSort.java">HeapSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Horner.java">Horner.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="HuffmanTree.java">HuffmanTree.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ImageComponents.java">ImageComponents.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="InfixForm.java">InfixForm.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">835 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Insert.java">Insert.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="InsertionSort1.java">InsertionSort1.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="InsertionSort2.java">InsertionSort2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="IterativeBTLoading.java">IterativeBTLoading.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="IterativeDPImageCompression.java">IterativeDPImageCompression.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="IterativeDPKnapsack.java">IterativeDPKnapsack.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="IterativeDPMatrixChain.java">IterativeDPMatrixChain.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="IterativeDPNoncrossingSubset.java">IterativeDPNoncrossingSubset.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="LPTSchedule.java">LPTSchedule.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="LeastCostBBBoard.java">LeastCostBBBoard.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">6.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MachineShopSimulator.java">MachineShopSimulator.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">9.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MaxProfitBBKnapsack.java">MaxProfitBBKnapsack.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">9.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MaxProfitBBLoading.java">MaxProfitBBLoading.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MergeSort.java">MergeSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MinMax1.java">MinMax1.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MinMax2.java">MinMax2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MinMax3.java">MinMax3.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="MinMaxPair.java">MinMaxPair.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">276 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="OfflineEquivalenceClasses.java">OfflineEquivalenceClasses.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ParenthesisMatching.java">ParenthesisMatching.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Permutation.java">Permutation.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">1.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="PlaceBoosters.java">PlaceBoosters.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="QuadraticRoots.java">QuadraticRoots.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="QuickSort.java">QuickSort.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.5K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RailroadWithNoQueues.java">RailroadWithNoQueues.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">3.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RailroadWithQueues.java">RailroadWithQueues.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RailroadWithStacks.java">RailroadWithStacks.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Rank.java">Rank.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RankSort1.java">RankSort1.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RankSort2.java">RankSort2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RatInAMaze.java">RatInAMaze.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveBTBoard.java">RecursiveBTBoard.java</a></td><td align="right">2003-09-25 12:50  </td><td align="right">4.2K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveBTKnapsack.java">RecursiveBTKnapsack.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">4.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveBTLoading1.java">RecursiveBTLoading1.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveBTLoading2.java">RecursiveBTLoading2.java</a></td><td align="right">2003-09-25 12:51  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveBTLoading3.java">RecursiveBTLoading3.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPImageCompression1.java">RecursiveDPImageCompression1.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPImageCompression2.java">RecursiveDPImageCompression2.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">3.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPKnapsack.java">RecursiveDPKnapsack.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPKnapsack3.java">RecursiveDPKnapsack3.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPMatrixChain1.java">RecursiveDPMatrixChain1.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.6K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveDPMatrixChain2.java">RecursiveDPMatrixChain2.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.9K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveSequentialSearch.java">RecursiveSequentialSearch.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="RecursiveSum.java">RecursiveSum.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="ScoreObject.java">ScoreObject.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">224 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="Select.java">Select.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">2.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SelectionSort.java">SelectionSort.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.4K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SequentialSearch1.java">SequentialSearch1.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SequentialSearch2.java">SequentialSearch2.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SimpleHistogramming.java">SimpleHistogramming.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="StudentRecord.java">StudentRecord.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">383 </td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="SwitchBox.java">SwitchBox.java</a></td><td align="right">2003-09-25 12:52  </td><td align="right">1.7K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="TowersOfHanoi.java">TowersOfHanoi.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">1.0K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="TowersOfHanoiShowingStates.java">TowersOfHanoiShowingStates.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="TreeHistogramming.java">TreeHistogramming.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">2.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="UnionFindFirstSolution.java">UnionFindFirstSolution.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">1.1K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="UnionFindSecondSolution.java">UnionFindSecondSolution.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">1.8K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="UnionFindWithTrees.java">UnionFindWithTrees.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">1.3K</td><td>&nbsp;</td></tr>
+<tr><td valign="top"><img src="/icons/text.gif" alt="[TXT]"></td><td><a href="WireRouter.java">WireRouter.java</a></td><td align="right">2003-09-25 12:57  </td><td align="right">5.3K</td><td>&nbsp;</td></tr>
+   <tr><th colspan="5"><hr></th></tr>
+</table>
+<address>Apache/2.4.29 (Debian) Server at www.csie.ntu.edu.tw Port 443</address>
+</body></html>

@@ -1,0 +1,29 @@
+#
+# See: http://www.robotstxt.org/wc/exclusion.html#robotstxt
+# See: http://www.searchengineworld.com/robots/robots_tutorial.htm
+#
+
+User-agent: *
+Allow: /
+Disallow: /files/community
+Disallow: /files/community_forum
+Disallow: /files/community_album
+Disallow: /files/users_sharing
+Disallow: /css
+Disallow: /css_default
+Disallow: /images
+Disallow: /inc
+Disallow: /admin
+Disallow: /admin-op
+Disallow: /setup
+Disallow: /shadow
+Disallow: /shadow_community
+Disallow: /shadow_op
+Disallow: /shadow_others
+Disallow: /shadow_people
+Disallow: /shadow_rpc
+Disallow: /rpc
+Disallow: /rpc_admin
+Disallow: /user
+Disallow: /phpMyAdmin
+Disallow: /webreg
