@@ -5,22 +5,28 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import com.example.storage.bean.CartInfo;
+import com.example.storage.bean.ClientRequest;
 import com.example.storage.bean.material.ResponseInfo;
 import com.example.storage.bean.material.DataListInfo;
 import com.example.storage.bean.material.MaterialteInfo;
 import com.example.storage.database.CartDBHelper;
 import com.example.storage.database.GoodsDBHelper;
+import com.example.storage.provider.SPUtils;
 import com.example.storage.util.DateUtil;
+import com.example.storage.util.GetImageByUrl;
 import com.example.storage.util.SharedUtil;
 import com.example.storage.util.Utils;
 import com.google.gson.Gson;
 
 import com.google.gson.GsonBuilder;
 import com.loopj.android.http.*;
+
 import cz.msebera.android.httpclient.Header;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -44,9 +50,6 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.ImageView.ScaleType;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 /**
  * Created by ouyangshen on 2017/10/1.
  */
@@ -58,6 +61,8 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
     private int mCount; // 购物车中的商品数量
     private GoodsDBHelper mGoodsHelper; // 声明一个商品数据库的帮助器对象
     private CartDBHelper mCartHelper; // 声明一个购物车数据库的帮助器对象
+    private Context mContext;
+    private ArrayList<MaterialteInfo> goodsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +72,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
         tv_count = findViewById(R.id.tv_count);
         ll_channel = findViewById(R.id.ll_channel);
         findViewById(R.id.iv_cart).setOnClickListener(this);
-        tv_title.setText("手机商场");
+        tv_title.setText("物料列表");
     }
 
     @Override
@@ -145,6 +150,19 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
 //        // 查询商品数据库中的所有商品记录
 //        ArrayList<GoodsInfo> goodsArray = mGoodsHelper.query("1=1");
 
+        // 移除线性布局ll_channel下面的所有子视图
+        ll_channel.removeAllViews();
+        // mFullParams这个布局参数的宽度占了一整行
+        mFullParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        // mHalfParams这个布局参数的宽度与其它布局平均分
+        mHalfParams = new LayoutParams(0, LayoutParams.WRAP_CONTENT, 1);
+        // 给mHalfParams设置四周的空白距离
+        mHalfParams.setMargins(Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2));
+
+
+        goodsList = new ArrayList<MaterialteInfo>();
+//        LinearLayout ll_row = newLinearLayout(LinearLayout.HORIZONTAL, 0);
+
         @SuppressLint("HandlerLeak") Handler handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
@@ -152,19 +170,19 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                 switch (msg.what) {
                     case 0:
 
-                        // 移除线性布局ll_channel下面的所有子视图
-                        ll_channel.removeAllViews();
-                        // mFullParams这个布局参数的宽度占了一整行
-                        mFullParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-                        // mHalfParams这个布局参数的宽度与其它布局平均分
-                        mHalfParams = new LayoutParams(0, LayoutParams.WRAP_CONTENT, 1);
-                        // 给mHalfParams设置四周的空白距离
-                        mHalfParams.setMargins(Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2));
-                        // 创建一行的线性布局
+//                        // 移除线性布局ll_channel下面的所有子视图
+//                        ll_channel.removeAllViews();
+//                        // mFullParams这个布局参数的宽度占了一整行
+//                        mFullParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+//                        // mHalfParams这个布局参数的宽度与其它布局平均分
+//                        mHalfParams = new LayoutParams(0, LayoutParams.WRAP_CONTENT, 1);
+//                        // 给mHalfParams设置四周的空白距离
+//                        mHalfParams.setMargins(Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2), Utils.dip2px(ShoppingChannelActivity.this, 2));
+//                        // 创建一行的线性布局
                         LinearLayout ll_row = newLinearLayout(LinearLayout.HORIZONTAL, 0);
                         // 查询商品数据库中的所有商品记录
 //                        ArrayList<GoodsInfo> goodsArray = mGoodsHelper.query("1=1");
-                        ArrayList<MaterialteInfo> goodsList = new ArrayList<MaterialteInfo>();
+//                        ArrayList<MaterialteInfo> goodsList = new ArrayList<MaterialteInfo>();
 
 //                        Toast.makeText(LoginActivity.this, "服务器连接失败", Toast.LENGTH_SHORT).show();
 //                        String str = msg.obj.toString();
@@ -183,7 +201,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
 //                        ginfo.setDesc("魅族 PRO6S 4GB+64GB 全网通公开版 星空黑 移动联通电信4G手机");
 //                        ginfo.setPrice(90000);
                         for (int j = 0; j < role.size(); j++) {
-                            final MaterialteInfo ginfo = role.get(j);
+                            MaterialteInfo ginfo = role.get(j);
                             goodsList.add(ginfo);
                         }
 //                        Toast.makeText(ShoppingChannelActivity.this, ""+goodsArray.size(), Toast.LENGTH_SHORT).show();
@@ -208,6 +226,10 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                                     LayoutParams.MATCH_PARENT, Utils.dip2px(ShoppingChannelActivity.this, 150)));
                             iv_thumb.setScaleType(ScaleType.FIT_CENTER);
 //                            iv_thumb.setImageBitmap(MainApplication.getInstance().mIconMap.get(info.rowid));
+                            GetImageByUrl getImageByUrl = new GetImageByUrl();
+                            if (info.getImg() != "") {
+                                getImageByUrl.setImage(iv_thumb, info.getImg());
+                            }
                             iv_thumb.setOnClickListener(new OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -230,13 +252,31 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                             Button btn_add = new Button(ShoppingChannelActivity.this);
                             btn_add.setLayoutParams(new LayoutParams(0, LayoutParams.WRAP_CONTENT, 3));
                             btn_add.setGravity(Gravity.CENTER);
-                            btn_add.setText("加入购物车");
+                            btn_add.setText("开门");
                             btn_add.setTextColor(Color.BLACK);
                             btn_add.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
                             btn_add.setOnClickListener(new OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    async_post_test();
+                                    //            jsonParams.put("orderId", 0);
+//            jsonParams.put("userId", 564);
+//            jsonParams.put("type", 2);
+//            jsonParams.put("materialId", 9);
+//            jsonParams.put("operation", 1);
+//            jsonParams.put("openWay", 2);
+                                    ClientRequest clientRequest = new ClientRequest();
+                                    SharedPreferences mShared = getSharedPreferences("share_login", MODE_PRIVATE);
+                                    int userId = mShared.getInt("userInfo", 0);
+                                    clientRequest.setUserId(userId);
+                                    clientRequest.setType(2);
+                                    clientRequest.setMaterialId(info.getMaterialId());
+                                    clientRequest.setOperation(1);
+                                    clientRequest.setOpenWay(2);
+                                    Toast.makeText(ShoppingChannelActivity.this,
+                                            "已添加2222部" + info.getMaterialId() + "到购物车", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ShoppingChannelActivity.this,
+                                            "已添加一部" + userId + "到购物车", Toast.LENGTH_SHORT).show();
+//                                    async_post_test(clientRequest);
 //                                    addToCart(info.rowid);
 //                                    Toast.makeText(ShoppingChannelActivity.this,
 //                                            "已添加一部" + info.getName() + "到购物车", Toast.LENGTH_SHORT).show();
@@ -253,7 +293,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                                 ll_row = newLinearLayout(LinearLayout.HORIZONTAL, 0);
                             }
 
-                            if (goodsList.size() == i+1){
+                            if (goodsList.size() == i + 1) {
 //                                ll_channel.addView(ll_row);
                                 if (i % 2 == 0) {
                                     ll_row.addView(newLinearLayout(LinearLayout.VERTICAL, 1));
@@ -261,11 +301,11 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                                 }
                             }
                         }
-                        // 最后一行只有一个商品项，则补上一个空白格，然后把最后一行添加到ll_channel
-//                        if (i % 2 == 0) {
-//                            ll_row.addView(newLinearLayout(LinearLayout.VERTICAL, 1));
-//                            ll_channel.addView(ll_row);
-//                        }
+//                         最后一行只有一个商品项，则补上一个空白格，然后把最后一行添加到ll_channel
+                        if (i % 2 == 0) {
+                            ll_row.addView(newLinearLayout(LinearLayout.VERTICAL, 1));
+                            ll_channel.addView(ll_row);
+                        }
 
                         break;
                     case 1:
@@ -367,7 +407,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
         return ll_new;
     }
 
-    private void client_get_test(final android.os.Handler mh){
+    private void client_get_test(final android.os.Handler mh) {
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
@@ -430,7 +470,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
                         // }
                         Message msg = new Message();
                         Bundle bundle = new Bundle();
-                        bundle.putString("mmmm",res);  //往Bundle中存放数据
+                        bundle.putString("mmmm", res);  //往Bundle中存放数据
                         msg.what = OK;
                         msg.setData(bundle);//mes利用Bundle传递数据
                         mh.sendMessage(msg);
@@ -444,10 +484,45 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
         );
     }
 
-    private void async_post_test(){
+    private void async_post_test(ClientRequest clientRequest) {
 //        String username = et_username.getText().toString();
 //        String password = et_password.getText().toString();
         AsyncHttpClient client = new AsyncHttpClient();
+
+        Gson gson = new Gson();
+        String jsonObject = gson.toJson(clientRequest);
+        try {
+            ByteArrayEntity entity = new ByteArrayEntity(jsonObject.getBytes("UTF-8"));
+            entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+
+            client.post(getApplicationContext(), "http://192.168.1.183:8080/v1/ms304w/open", entity, "application/json", new AsyncHttpResponseHandler() {
+
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                    // TODO Auto-generated method stub
+//            Message msg = new Message();
+//            msg.what = OK;
+//            msg.obj = new String(responseBody);
+//            mh.sendMessage(msg);
+                    String str = new String(responseBody);
+                    Toast.makeText(ShoppingChannelActivity.this, "" + str, Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onFailure(int statusCode, Header[] headers,
+                                      byte[] responseBody, Throwable error) {
+                    // TODO Auto-generated method stub
+//            Message msg = new Message();
+//            msg.what = OK;
+//            msg.obj = new String(responseBody);
+//            mh.sendMessage(msg);
+                }
+            });
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
 //        RequestParams params = new RequestParams();
 //        params.add("username", username);
 //        params.add("password", password);
@@ -471,48 +546,48 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
 //                .build();
 //        ScaanRestClient restClient = new ScaanRestClient(getApplicationContext());
 //        JsonObject jo = Json.createObjectBuilder()
-        JSONObject jsonParams = new JSONObject();
-
-        try {
-            jsonParams.put("orderId", 0);
-            jsonParams.put("userId", 564);
-            jsonParams.put("type", 2);
-            jsonParams.put("materialId", 9);
-            jsonParams.put("operation", 1);
-            jsonParams.put("openWay", 2);
-//            StringEntity entity = new StringEntity(jsonParams.toString());
+//        JSONObject jsonParams = new JSONObject();
+//
+//        try {
+//            jsonParams.put("orderId", 0);
+//            jsonParams.put("userId", 564);
+//            jsonParams.put("type", 2);
+//            jsonParams.put("materialId", 9);
+//            jsonParams.put("operation", 1);
+//            jsonParams.put("openWay", 2);
+////            StringEntity entity = new StringEntity(jsonParams.toString());
+////            entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+//            ByteArrayEntity entity = new ByteArrayEntity(jsonParams.toString().getBytes("UTF-8"));
 //            entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-            ByteArrayEntity  entity = new ByteArrayEntity(jsonParams.toString().getBytes("UTF-8"));
-            entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-            client.post(getApplicationContext(),"http://192.168.1.183:8080/v1/ms304w/open", entity,"application/json", new AsyncHttpResponseHandler() {
-
-                @Override
-                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody){
-                    // TODO Auto-generated method stub
-//            Message msg = new Message();
-//            msg.what = OK;
-//            msg.obj = new String(responseBody);
-//            mh.sendMessage(msg);
-                    String str = new String(responseBody);
-                    Toast.makeText(ShoppingChannelActivity.this, ""+str, Toast.LENGTH_SHORT).show();
-
-                }
-
-                @Override
-                public void onFailure(int statusCode, Header[] headers,
-                                      byte[] responseBody, Throwable error) {
-                    // TODO Auto-generated method stub
-//            Message msg = new Message();
-//            msg.what = OK;
-//            msg.obj = new String(responseBody);
-//            mh.sendMessage(msg);
-                }
-            });
-        }catch (JSONException e){
-            e.printStackTrace();
-        }catch (UnsupportedEncodingException e){
-            e.printStackTrace();
-        }
+//            client.post(getApplicationContext(), "http://192.168.1.183:8080/v1/ms304w/open", entity, "application/json", new AsyncHttpResponseHandler() {
+//
+//                @Override
+//                public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+//                    // TODO Auto-generated method stub
+////            Message msg = new Message();
+////            msg.what = OK;
+////            msg.obj = new String(responseBody);
+////            mh.sendMessage(msg);
+//                    String str = new String(responseBody);
+//                    Toast.makeText(ShoppingChannelActivity.this, "" + str, Toast.LENGTH_SHORT).show();
+//
+//                }
+//
+//                @Override
+//                public void onFailure(int statusCode, Header[] headers,
+//                                      byte[] responseBody, Throwable error) {
+//                    // TODO Auto-generated method stub
+////            Message msg = new Message();
+////            msg.what = OK;
+////            msg.obj = new String(responseBody);
+////            mh.sendMessage(msg);
+//                }
+//            });
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
 //        jsonParams.put("", 564);
 
 //        StringEntity entity = new StringEntity(jsonParams.toString());
@@ -541,5 +616,5 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
 ////            mh.sendMessage(msg);
 //        }
 //    });
-}
+    }
 }

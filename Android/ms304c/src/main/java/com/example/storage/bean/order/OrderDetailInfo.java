@@ -1,4 +1,4 @@
-package com.example.storage.bean.material;
+package com.example.storage.bean.order;
 
 /**
  * Created by Administrator on 2019/12/6.
@@ -17,29 +17,33 @@ package com.example.storage.bean.material;
 //                MaterialSpec string `orm:"column(material_spec)" json:"materialSpec"`
 //        }
 
-public class MaterialteInfo {
-
-    private int materialId;
+public class OrderDetailInfo {
+    private int id;
     private String created;
     private int createdBy;
     private String materialName;
     private String materialCode;
     private String materialSpec;
-    private String tag;
-    private String img;
-    private int weight;
-    private int precision;
-    private String code;
+    private String name;
+    private int qty;
     private int status;
     private String updated;
     private int updatedBy;
 
-    public int getMaterialId() {
-        return materialId;
+    public String getName() {
+        return name;
     }
 
-    public void setMaterialId(int materialId) {
-        this.materialId = materialId;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 
     public String getMaterialName() {
@@ -64,6 +68,14 @@ public class MaterialteInfo {
 
     public void setMaterialSpec(String materialSpec) {
         this.materialSpec = materialSpec;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCreated() {
@@ -106,68 +118,23 @@ public class MaterialteInfo {
         this.updatedBy = updatedBy;
     }
 
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
-
-    public int getPrecision() {
-        return precision;
-    }
-
-    public void setPrecision(int precision) {
-        this.precision = precision;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public MaterialteInfo(int materialId, String created, int createdBy, String materialName,
-                          String materialCode, String materialSpec, String tag, String img,
-                          int weight, int precision, String code, int status, String updated,
-                          int updatedBy) {
+    public OrderDetailInfo(int id, String created, int createdBy, String materialName, String materialCode, String materialSpec, String name, int qty, int status, String updated,
+                           int updatedBy) {
         super();
-        this.materialId = materialId;
+        this.id = id;
         this.created = created;
         this.createdBy = createdBy;
         this.materialName = materialName;
         this.materialCode = materialCode;
         this.materialSpec = materialSpec;
-        this.tag = tag;
-        this.img = img;
-        this.weight = weight;
-        this.precision = precision;
-        this.code = code;
+        this.name = name;
+        this.qty = qty;
         this.status = status;
         this.updated = updated;
         this.updatedBy = updatedBy;
     }
 
-    public MaterialteInfo() {
+    public OrderDetailInfo() {
         super();
     }
 }

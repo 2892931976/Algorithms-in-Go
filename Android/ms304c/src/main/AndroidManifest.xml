@@ -18,6 +18,8 @@
     <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
     <!-- 读取电话状态 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
     
     <application
         android:allowBackup="true"
@@ -57,8 +59,18 @@
         <activity android:name=".ContentObserverActivity" />
         <activity android:name=".MenuOptionActivity" android:theme="@style/AppBaseTheme" />
         <activity android:name=".MenuContextActivity" />
+        <activity android:name=".ListViewActivity" />
         <activity android:name=".ShoppingCartActivity" android:theme="@style/AppBaseTheme" />
         <activity android:name=".ShoppingChannelActivity" />
+
+        <activity android:name=".SearchViewActivity" android:theme="@style/AppCompatTheme" />
+        <activity android:name=".SearchResultActvity" android:theme="@style/AppCompatTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+
         <activity android:name=".ShoppingDetailActivity" />
         
         <provider
