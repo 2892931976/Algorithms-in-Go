@@ -25,10 +25,19 @@ public class OrderDetailInfo {
     private String materialCode;
     private String materialSpec;
     private String name;
+    private int type;
     private int qty;
     private int status;
     private String updated;
     private int updatedBy;
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public String getName() {
         return name;
@@ -118,7 +127,7 @@ public class OrderDetailInfo {
         this.updatedBy = updatedBy;
     }
 
-    public OrderDetailInfo(int id, String created, int createdBy, String materialName, String materialCode, String materialSpec, String name, int qty, int status, String updated,
+    public OrderDetailInfo(int id, String created, int createdBy, String materialName, String materialCode, String materialSpec, String name, int qty, int type, int status, String updated,
                            int updatedBy) {
         super();
         this.id = id;
@@ -129,6 +138,7 @@ public class OrderDetailInfo {
         this.materialSpec = materialSpec;
         this.name = name;
         this.qty = qty;
+        this.type = type;
         this.status = status;
         this.updated = updated;
         this.updatedBy = updatedBy;

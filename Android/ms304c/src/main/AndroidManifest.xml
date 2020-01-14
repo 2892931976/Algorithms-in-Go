@@ -60,8 +60,9 @@
         <activity android:name=".MenuOptionActivity" android:theme="@style/AppBaseTheme" />
         <activity android:name=".MenuContextActivity" />
         <activity android:name=".ListViewActivity" />
+        <activity android:name=".BaseAdapterActivity" />
         <activity android:name=".ShoppingCartActivity" android:theme="@style/AppBaseTheme" />
-        <activity android:name=".ShoppingChannelActivity" />
+        <activity android:name=".ShoppingChannelActivity" android:theme="@style/AppCompatTheme" />
 
         <activity android:name=".SearchViewActivity" android:theme="@style/AppCompatTheme" />
         <activity android:name=".SearchResultActvity" android:theme="@style/AppCompatTheme" >

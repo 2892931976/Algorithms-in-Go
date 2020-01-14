@@ -6,22 +6,28 @@ import java.util.ArrayList;
 
 public class Planet {
     public int image;
-    public String name;
-    public String desc;
-    public String desc2;
-    public String desc3;
+    public String username;
+    public String materialName;
+    public String materialCode;
+    public String materialSpec;
+    public String created;
+    public String type;
+    public String qty;
 
-    public Planet(int image, String name, String desc) {
+    public Planet(int image, String username, String materialName) {
         this.image = image;
-        this.name = name;
-        this.desc = desc;
+        this.username = username;
+        this.materialName = materialName;
     }
 
-    public Planet(String name, String desc, String desc2, String desc3) {
-        this.name = name;
-        this.desc = desc;
-        this.desc2 = desc2;
-        this.desc3 = desc3;
+    public Planet(String username, String materialName, String materialCode, String materialSpec, String created, String qty, String type) {
+        this.username = username;
+        this.materialName = materialName;
+        this.materialCode = materialCode;
+        this.materialSpec = materialSpec;
+        this.created = created;
+        this.qty = qty;
+        this.type = type;
     }
 
     private static int[] iconArray = {R.drawable.shuixing, R.drawable.jinxing, R.drawable.diqiu,

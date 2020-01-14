@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.btn_list_view).setOnClickListener(this);
         findViewById(R.id.btn_shopping_cart).setOnClickListener(this);
         findViewById(R.id.btn_search_view).setOnClickListener(this);
+        findViewById(R.id.btn_base_adapter).setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             startActivity(intent);
         } else if (v.getId() == R.id.btn_search_view) {
             Intent intent = new Intent(this, SearchViewActivity.class);
+            startActivity(intent);
+        }else if (v.getId() == R.id.btn_base_adapter) {
+            Intent intent = new Intent(this, BaseAdapterActivity.class);
             startActivity(intent);
         }
 //        else if (v.getId() == R.id.btn_sqlite_create) {

@@ -40,6 +40,7 @@ public class ListViewActivity extends AppCompatActivity implements OnClickListen
     private final static String TAG = "ListViewActivity";
     private ListView lv_planet; // 声明一个列表视图对象
     private Drawable drawable;  // 声明一个图形对象
+    private static String[] nameArray = {"", "补料", "领料", "归还", "报废", "回收"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,7 @@ public class ListViewActivity extends AppCompatActivity implements OnClickListen
 //                        Toast.makeText(ListViewActivity.this, ""+od.getMaterialName(), Toast.LENGTH_SHORT).show();
                         for (int j = 0; j < role.size(); j++) {
                             final OrderDetailInfo ginfo = role.get(j);
-                            Planet pinfo = new Planet(ginfo.getName(), ginfo.getMaterialName(), "" + ginfo.getQty(), ginfo.getMaterialCode());
+                            Planet pinfo = new Planet(ginfo.getName(), ginfo.getMaterialName(), ginfo.getMaterialCode(), ginfo.getMaterialSpec(), ginfo.getCreated(), ""+ ginfo.getQty(), ""+ginfo.getType());
                             planetList.add(pinfo);
                         }
                         // 构建一个行星队列的列表适配器
