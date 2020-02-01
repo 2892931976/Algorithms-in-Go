@@ -277,6 +277,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="基本适配器" />
+
+                <Button
+                    android:id="@+id/btn_recycler_grid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="普通网格布局" />
+
+                <Button
+                    android:id="@+id/btn_xiao_adapter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="校正适配器" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

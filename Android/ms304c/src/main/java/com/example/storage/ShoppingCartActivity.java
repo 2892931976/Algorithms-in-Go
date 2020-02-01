@@ -172,7 +172,7 @@ public class ShoppingCartActivity extends Activity implements OnClickListener {
             SharedUtil.getIntance(this).writeShared("count", "" + left_count);
             // 显示最新的商品数量
             showCount(left_count);
-            Toast.makeText(this, "已从购物车删除" + mGoodsMap.get(goods_id).name, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "已从购物车删除" + mGoodsMap.get(goods_id).name, Toast.LENGTH_SHORT).show();
             mGoodsMap.remove(goods_id);
             refreshTotalPrice();
         }
@@ -245,7 +245,7 @@ public class ShoppingCartActivity extends Activity implements OnClickListener {
             final CartInfo info = mCartArray.get(i);
             // 根据商品编号查询商品数据库中的商品记录
             GoodsInfo goods = mGoodsHelper.queryById(info.goods_id);
-            Log.d(TAG, "name=" + goods.name + ",price=" + goods.price + ",desc=" + goods.desc);
+//            Log.d(TAG, "name=" + goods.name + ",price=" + goods.price + ",desc=" + goods.desc);
             mGoodsMap.put(info.goods_id, goods);
             // 创建该商品行的水平线性视图，从左到右依次为商品小图、商品名称与描述、商品数量、商品单价、商品总价。
             ll_row = newLinearLayout(LinearLayout.HORIZONTAL, LayoutParams.WRAP_CONTENT);
@@ -265,13 +265,13 @@ public class ShoppingCartActivity extends Activity implements OnClickListener {
                     0, LayoutParams.MATCH_PARENT, 3);
             ll_name.setLayoutParams(params);
             ll_name.setOrientation(LinearLayout.VERTICAL);
-            ll_name.addView(newTextView(-3, 1, Gravity.LEFT, goods.name, Color.BLACK, 17));
+//            ll_name.addView(newTextView(-3, 1, Gravity.LEFT, goods.name, Color.BLACK, 17));
             ll_name.addView(newTextView(-3, 1, Gravity.LEFT, goods.desc, Color.GRAY, 12));
             ll_row.addView(ll_name);
             // 添加商品数量、单价和总价
             ll_row.addView(newTextView(1, 1, Gravity.CENTER, "" + info.count, Color.BLACK, 17));
-            ll_row.addView(newTextView(1, 1, Gravity.RIGHT, "" + (int) goods.price, Color.BLACK, 15));
-            ll_row.addView(newTextView(1, 1, Gravity.RIGHT, "" + (int) (info.count * goods.price), Color.RED, 17));
+//            ll_row.addView(newTextView(1, 1, Gravity.RIGHT, "" + (int) goods.price, Color.BLACK, 15));
+//            ll_row.addView(newTextView(1, 1, Gravity.RIGHT, "" + (int) (info.count * goods.price), Color.RED, 17));
             // 给商品行添加点击事件
             ll_row.setOnClickListener(new OnClickListener() {
                 @Override
@@ -295,7 +295,7 @@ public class ShoppingCartActivity extends Activity implements OnClickListener {
         int total_price = 0;
         for (CartInfo info : mCartArray) {
             GoodsInfo goods = mGoodsMap.get(info.goods_id);
-            total_price += goods.price * info.count;
+//            total_price += goods.price * info.count;
         }
         tv_total_price.setText("" + total_price);
     }
@@ -339,37 +339,37 @@ public class ShoppingCartActivity extends Activity implements OnClickListener {
         String path = MainApplication.getInstance().getExternalFilesDir(
                 Environment.DIRECTORY_DOWNLOADS).toString() + "/";
         if (mFirst.equals("true")) { // 如果是首次打开
-            ArrayList<GoodsInfo> goodsList = GoodsInfo.getDefaultList();
-            for (int i = 0; i < goodsList.size(); i++) {
-                GoodsInfo info = goodsList.get(i);
-                // 往商品数据库插入一条该商品的记录
-                long rowid = mGoodsHelper.insert(info);
-                info.rowid = rowid;
-                // 往全局内存写入商品小图
-                Bitmap thumb = BitmapFactory.decodeResource(getResources(), info.thumb);
-                MainApplication.getInstance().mIconMap.put(rowid, thumb);
-                String thumb_path = path + rowid + "_s.jpg";
-                FileUtil.saveImage(thumb_path, thumb);
-                info.thumb_path = thumb_path;
-                // 往SD卡保存商品大图
-                Bitmap pic = BitmapFactory.decodeResource(getResources(), info.pic);
-                String pic_path = path + rowid + ".jpg";
-                FileUtil.saveImage(pic_path, pic);
-                pic.recycle();
-                info.pic_path = pic_path;
-                // 更新商品数据库中该商品记录的图片路径
-                mGoodsHelper.update(info);
-            }
+//            ArrayList<GoodsInfo> goodsList = GoodsInfo.getDefaultList();
+//            for (int i = 0; i < goodsList.size(); i++) {
+//                GoodsInfo info = goodsList.get(i);
+//                // 往商品数据库插入一条该商品的记录
+//                long rowid = mGoodsHelper.insert(info);
+//                info.rowid = rowid;
+//                // 往全局内存写入商品小图
+//                Bitmap thumb = BitmapFactory.decodeResource(getResources(), info.thumb);
+//                MainApplication.getInstance().mIconMap.put(rowid, thumb);
+//                String thumb_path = path + rowid + "_s.jpg";
+//                FileUtil.saveImage(thumb_path, thumb);
+//                info.thumb_path = thumb_path;
+//                // 往SD卡保存商品大图
+//                Bitmap pic = BitmapFactory.decodeResource(getResources(), info.pic);
+//                String pic_path = path + rowid + ".jpg";
+//                FileUtil.saveImage(pic_path, pic);
+//                pic.recycle();
+//                info.pic_path = pic_path;
+//                // 更新商品数据库中该商品记录的图片路径
+//                mGoodsHelper.update(info);
+//            }
         } else { // 不是首次打开
-            // 查询商品数据库中所有商品记录
-            ArrayList<GoodsInfo> goodsArray = mGoodsHelper.query("1=1");
-            for (int i = 0; i < goodsArray.size(); i++) {
-                GoodsInfo info = goodsArray.get(i);
-                // 从指定路径读取图片文件的位图数据
-                Bitmap thumb = BitmapFactory.decodeFile(info.thumb_path);
-                // 把该位图对象保存到应用实例的全局变量中
-                MainApplication.getInstance().mIconMap.put(info.rowid, thumb);
-            }
+//            // 查询商品数据库中所有商品记录
+//            ArrayList<GoodsInfo> goodsArray = mGoodsHelper.query("1=1");
+//            for (int i = 0; i < goodsArray.size(); i++) {
+//                GoodsInfo info = goodsArray.get(i);
+//                // 从指定路径读取图片文件的位图数据
+//                Bitmap thumb = BitmapFactory.decodeFile(info.thumb_path);
+//                // 把该位图对象保存到应用实例的全局变量中
+//                MainApplication.getInstance().mIconMap.put(info.rowid, thumb);
+//            }
         }
         // 把是否首次打开写入共享参数
         SharedUtil.getIntance(this).writeShared("first", "false");

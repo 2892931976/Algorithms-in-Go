@@ -42,64 +42,6 @@
             android:layout_marginTop="10dp"
             android:spinnerMode="dialog" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="行星的列表视图"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <Spinner
-            android:id="@+id/material_planet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:spinnerMode="dialog" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/ck_custom_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@drawable/checkbox_selector"
-                android:checked="false"
-                android:padding="10dp"
-                android:text="这个CheckBox换了图标1"
-                android:textColor="#000000"
-                android:textSize="17sp" />
-
-            <CheckBox
-                android:id="@+id/ck_custom_2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@drawable/checkbox_selector"
-                android:checked="false"
-                android:padding="10dp"
-                android:text="这个CheckBox换了图标2"
-                android:textColor="#000000"
-                android:textSize="17sp" />
-
-            <CheckBox
-                android:id="@+id/ck_custom_3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:button="@drawable/checkbox_selector"
-                android:checked="false"
-                android:padding="10dp"
-                android:text="这个CheckBox换了图标3"
-                android:textColor="#000000"
-                android:textSize="17sp" />
-
-        </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -111,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="解绑"
+                android:text="开门"
                 android:textColor="#000000"
                 android:textSize="12sp" />
 
@@ -120,7 +62,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="绑定"
+                android:text="清空归零"
                 android:textColor="#000000"
                 android:textSize="12sp" />
 
@@ -129,7 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="更换物料"
+                android:text="校正"
                 android:textColor="#000000"
                 android:textSize="12sp" />
 
@@ -138,7 +80,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="物料调拨"
+                android:text="称重"
                 android:textColor="#000000"
                 android:textSize="12sp" />
 
@@ -154,7 +96,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:gravity="center"
-                android:text="姓名："
+                android:text="格子："
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
@@ -167,7 +109,7 @@
                 android:layout_toRightOf="@+id/tv_name"
                 android:background="@drawable/editext_selector"
                 android:gravity="left|center"
-                android:hint="请输入姓名"
+                android:hint="请输入格子"
                 android:inputType="text"
                 android:maxLength="12"
                 android:textColor="@color/black"
@@ -186,7 +128,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:gravity="center"
-                android:text="年龄："
+                android:text="空载误差值："
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
@@ -199,7 +141,7 @@
                 android:layout_toRightOf="@+id/tv_age"
                 android:background="@drawable/editext_selector"
                 android:gravity="left|center"
-                android:hint="请输入年龄"
+                android:hint="请输入空载误差值"
                 android:inputType="number"
                 android:maxLength="2"
                 android:textColor="@color/black"
@@ -218,7 +160,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:gravity="center"
-                android:text="身高："
+                android:text="砝码重量："
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
@@ -231,7 +173,7 @@
                 android:layout_toRightOf="@+id/tv_height"
                 android:background="@drawable/editext_selector"
                 android:gravity="left|center"
-                android:hint="请输入身高"
+                android:hint="请输入砝码重量"
                 android:inputType="number"
                 android:maxLength="3"
                 android:textColor="@color/black"
@@ -245,25 +187,25 @@
             android:layout_height="50dp">
 
             <TextView
-                android:id="@+id/tv_weight"
+                android:id="@+id/tv_xiao"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:gravity="center"
-                android:text="体重："
+                android:text="校正结果："
                 android:textColor="@color/black"
                 android:textSize="17sp" />
 
             <EditText
-                android:id="@+id/et_weight"
+                android:id="@+id/et_xiao"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:layout_toRightOf="@+id/tv_weight"
+                android:layout_toRightOf="@+id/tv_xiao"
                 android:background="@drawable/editext_selector"
                 android:gravity="left|center"
-                android:hint="请输入体重"
+                android:hint="请输入校正结果"
                 android:inputType="numberDecimal"
                 android:maxLength="5"
                 android:textColor="@color/black"
@@ -272,28 +214,37 @@
                 android:textSize="17sp" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-
-            <TextView
-                android:id="@+id/tv_married"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentLeft="true"
-                android:gravity="center"
-                android:text="婚否："
-                android:textColor="@color/black"
-                android:textSize="17sp" />
-
-            <Spinner
-                android:id="@+id/sp_married"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_toRightOf="@+id/tv_married"
-                android:gravity="left|center"
-                android:spinnerMode="dialog" />
-        </RelativeLayout>
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/tv_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="称重数值："
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/et_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/tv_weight"
+                    android:background="@drawable/editext_selector"
+                    android:gravity="left|center"
+                    android:hint="请输入称重数值"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textCursorDrawable="@drawable/text_cursor"
+                    android:textSize="17sp" />
+            </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>

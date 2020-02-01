@@ -165,7 +165,7 @@ public class ListViewActivity extends AppCompatActivity implements OnClickListen
         params.put("pageSize", "100");
         params.put("type", "0");
 
-        client.get("http://192.168.1.183:8081/v1/order/detail/all", params, new TextHttpResponseHandler() {
+        client.get("http://157.52.168.109:8081/v1/order/detail/all", params, new TextHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, String res) {
 

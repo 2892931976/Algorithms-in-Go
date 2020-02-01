@@ -4,13 +4,13 @@
     android:background="@color/white"
     android:orientation="horizontal">
 
-    <!-- 这是显示行星图片的图像视图 -->
-    <ImageView
-        android:id="@+id/iv_icon"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_weight="1"
-        android:scaleType="fitCenter" />
+<!--    &lt;!&ndash; 这是显示行星图片的图像视图 &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_icon"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:scaleType="fitCenter" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,51 +38,51 @@
             android:textColor="@color/black"
             android:textSize="13sp" />
 
-        <TextView
-            android:id="@+id/tv_materialCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="left|center"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
-        <TextView
-            android:id="@+id/tv_materialSpec"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="left|center"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_materialCode"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:gravity="left|center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="13sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_materialSpec"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:gravity="left|center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="13sp" />-->
 
-        <!-- 这是显示行星名称的文本视图 -->
-        <TextView
-            android:id="@+id/tv_created"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="left|center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+<!--        &lt;!&ndash; 这是显示行星名称的文本视图 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_created"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="left|center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="20sp" />-->
 
-        <!-- 这是显示行星描述的文本视图 -->
-        <TextView
-            android:id="@+id/tv_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="left|center"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+<!--        &lt;!&ndash; 这是显示行星描述的文本视图 &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_type"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:gravity="left|center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="13sp" />-->
 
-        <TextView
-            android:id="@+id/tv_qty"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="left|center"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_qty"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:gravity="left|center"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="13sp" />-->
 
         <!--&lt;!&ndash; 这是显示行星名称的文本视图 &ndash;&gt;-->
         <!--<TextView-->

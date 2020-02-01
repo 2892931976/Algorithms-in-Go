@@ -14,18 +14,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.storage.R;
-import com.example.storage.bean.Planet;
+import com.example.storage.bean.material.MaterialteInfo;
 
 import java.util.ArrayList;
 
 @SuppressLint("DefaultLocale")
-public class PlanetListAdapter extends BaseAdapter implements
+public class MaterialListAdapter extends BaseAdapter implements
         OnItemClickListener, OnItemLongClickListener {
     private Context mContext; // 声明一个上下文对象
-    private ArrayList<Planet> mPlanetList; // 声明一个行星信息队列
+    private ArrayList<MaterialteInfo> mPlanetList; // 声明一个行星信息队列
 
     // 行星适配器的构造函数，传入上下文与行星队列
-    public PlanetListAdapter(Context context, ArrayList<Planet> planet_list) {
+    public MaterialListAdapter(Context context, ArrayList<MaterialteInfo> planet_list) {
         mContext = context;
         mPlanetList = planet_list;
     }
@@ -55,26 +55,16 @@ public class PlanetListAdapter extends BaseAdapter implements
 //            holder.iv_icon = convertView.findViewById(R.id.iv_icon);
             holder.tv_username = convertView.findViewById(R.id.tv_username);
             holder.tv_materialName = convertView.findViewById(R.id.tv_materialName);
-//            holder.tv_materialCode = convertView.findViewById(R.id.tv_materialCode);
-//            holder.tv_materialSpec = convertView.findViewById(R.id.tv_materialSpec);
-//            holder.tv_created = convertView.findViewById(R.id.tv_created);
-//            holder.tv_type = convertView.findViewById(R.id.tv_type);
-//            holder.tv_qty = convertView.findViewById(R.id.tv_qty);
             // 将视图持有者保存到转换视图当中
             convertView.setTag(holder);
         } else { // 转换视图非空
             // 从转换视图中获取之前保存的视图持有者
             holder = (ViewHolder) convertView.getTag();
         }
-        Planet planet = mPlanetList.get(position);
-        holder.iv_icon.setImageResource(planet.image); // 显示行星的图片
-        holder.tv_username.setText(planet.username); // 显示行星的名称
-        holder.tv_materialName.setText(planet.materialName); // 显示行星的描述
-        holder.tv_materialCode.setText(planet.materialCode); // 显示行星的描述
-        holder.tv_materialSpec.setText(planet.materialSpec); // 显示行星的描述
-        holder.tv_created.setText(planet.created); // 显示行星的名称
-        holder.tv_type.setText(planet.type); // 显示行星的描述
-        holder.tv_qty.setText(planet.qty); // 显示行星的描述
+        MaterialteInfo planet = mPlanetList.get(position);
+//        holder.iv_icon.setImageResource(planet.image); // 显示行星的图片
+        holder.tv_username.setText(planet.getMaterialName()); // 显示行星的名称
+        holder.tv_materialName.setText(planet.getMaterialCode()); // 显示行星的描述
         return convertView;
     }
 
@@ -98,14 +88,14 @@ public class PlanetListAdapter extends BaseAdapter implements
     // 处理列表项的点击事件，由接口OnItemClickListener触发
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String desc = String.format("您点击了第%d个行星，它的名字是%s", position + 1,
-                mPlanetList.get(position).username);
+                mPlanetList.get(position).getMaterialName());
         Toast.makeText(mContext, desc, Toast.LENGTH_LONG).show();
     }
 
     // 处理列表项的长按事件，由接口OnItemLongClickListener触发
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         String desc = String.format("您长按了第%d个行星，它的名字是%s", position + 1,
-                mPlanetList.get(position).username);
+                mPlanetList.get(position).getMaterialName());
         Toast.makeText(mContext, desc, Toast.LENGTH_LONG).show();
         return true;
     }

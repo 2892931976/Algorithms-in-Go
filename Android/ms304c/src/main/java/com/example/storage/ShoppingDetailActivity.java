@@ -116,12 +116,12 @@ public class ShoppingDetailActivity extends AppCompatActivity implements OnClick
         if (mGoodsId > 0) {
             // 根据商品编号查询商品数据库中的商品记录
             GoodsInfo info = mGoodsHelper.queryById(mGoodsId);
-            tv_title.setText(info.name);
-            tv_goods_desc.setText(info.desc);
-            tv_goods_price.setText("" + info.price);
-            // 从指定路径读取图片文件的位图数据
-            Bitmap pic = BitmapFactory.decodeFile(info.pic_path);
-            iv_goods_pic.setImageBitmap(pic);
+//            tv_title.setText(info.name);
+//            tv_goods_desc.setText(info.desc);
+//            tv_goods_price.setText("" + info.price);
+//            // 从指定路径读取图片文件的位图数据
+//            Bitmap pic = BitmapFactory.decodeFile(info.pic_path);
+//            iv_goods_pic.setImageBitmap(pic);
         }
     }
 

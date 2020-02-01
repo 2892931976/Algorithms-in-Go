@@ -587,7 +587,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
         params.put("pageSize", "1000");
         params.put("status", "1");
 
-        client.get("http://192.168.1.183:8081/v1/material", params, new TextHttpResponseHandler() {
+        client.get("http://157.52.168.109:8081/v1/material", params, new TextHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, String res) {
                         // called when response HTTP status is "200 OK"
@@ -626,7 +626,7 @@ public class ShoppingChannelActivity extends AppCompatActivity implements OnClic
             ByteArrayEntity entity = new ByteArrayEntity(jsonObject.getBytes("UTF-8"));
             entity.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
 
-            client.post(getApplicationContext(), "http://192.168.1.183:8080/v1/ms304w/open", entity, "application/json", new AsyncHttpResponseHandler() {
+            client.post(getApplicationContext(), "http://157.52.168.109:8080/v1/ms304w/open", entity, "application/json", new AsyncHttpResponseHandler() {
 
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {

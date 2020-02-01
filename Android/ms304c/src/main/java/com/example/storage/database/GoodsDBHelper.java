@@ -109,19 +109,19 @@ public class GoodsDBHelper extends SQLiteOpenHelper {
         long result = -1;
         for (GoodsInfo info : infoArray) {
             // 如果存在相同rowid的记录，则更新记录
-            if (info.rowid > 0) {
-                String condition = String.format("rowid='%d'", info.rowid);
-                update(info, condition);
-                result = info.rowid;
-                continue;
-            }
+//            if (info.rowid > 0) {
+//                String condition = String.format("rowid='%d'", info.rowid);
+//                update(info, condition);
+//                result = info.rowid;
+//                continue;
+//            }
             // 不存在唯一性重复的记录，则插入新记录
             ContentValues cv = new ContentValues();
-            cv.put("name", info.name);
+//            cv.put("name", info.name);
             cv.put("desc", info.desc);
-            cv.put("price", info.price);
-            cv.put("thumb_path", info.thumb_path);
-            cv.put("pic_path", info.pic_path);
+//            cv.put("price", info.price);
+//            cv.put("thumb_path", info.thumb_path);
+//            cv.put("pic_path", info.pic_path);
             // 执行插入记录动作，该语句返回插入记录的行号
             result = mDB.insert(TABLE_NAME, "", cv);
             // 添加成功后返回行号，失败后返回-1
@@ -135,18 +135,18 @@ public class GoodsDBHelper extends SQLiteOpenHelper {
     // 根据条件更新指定的表记录
     public int update(GoodsInfo info, String condition) {
         ContentValues cv = new ContentValues();
-        cv.put("name", info.name);
+//        cv.put("name", info.name);
         cv.put("desc", info.desc);
-        cv.put("price", info.price);
-        cv.put("thumb_path", info.thumb_path);
-        cv.put("pic_path", info.pic_path);
+//        cv.put("price", info.price);
+//        cv.put("thumb_path", info.thumb_path);
+//        cv.put("pic_path", info.pic_path);
         // 执行更新记录动作，该语句返回记录更新的数目
         return mDB.update(TABLE_NAME, cv, condition, null);
     }
 
     public int update(GoodsInfo info) {
         // 执行更新记录动作，该语句返回记录更新的数目
-        return update(info, "rowid=" + info.rowid);
+        return update(info, "rowid=" + info.desc);
     }
 
     // 根据指定条件查询记录，并返回结果数据队列
@@ -159,15 +159,15 @@ public class GoodsDBHelper extends SQLiteOpenHelper {
         Cursor cursor = mDB.rawQuery(sql, null);
         // 循环取出游标指向的每条记录
         while (cursor.moveToNext()) {
-            GoodsInfo info = new GoodsInfo();
-            info.rowid = cursor.getLong(0);
-            info.xuhao = cursor.getInt(1);
-            info.name = cursor.getString(2);
-            info.desc = cursor.getString(3);
-            info.price = cursor.getFloat(4);
-            info.thumb_path = cursor.getString(5);
-            info.pic_path = cursor.getString(6);
-            infoArray.add(info);
+//            GoodsInfo info = new GoodsInfo();
+//            info.rowid = cursor.getLong(0);
+//            info.xuhao = cursor.getInt(1);
+//            info.name = cursor.getString(2);
+//            info.desc = cursor.getString(3);
+//            info.price = cursor.getFloat(4);
+//            info.thumb_path = cursor.getString(5);
+//            info.pic_path = cursor.getString(6);
+//            infoArray.add(info);
         }
         cursor.close(); // 查询完毕，关闭游标
         return infoArray;

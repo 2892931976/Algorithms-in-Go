@@ -53,7 +53,7 @@ public class BoxListAdapter extends BaseAdapter implements
             holder = new ViewHolder(); // 创建一个新的视图持有者
             // 根据布局文件item_list.xml生成转换视图对象
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_list, null);
-            holder.iv_icon = convertView.findViewById(R.id.iv_icon);
+//            holder.iv_icon = convertView.findViewById(R.id.iv_icon);
             holder.tv_username = convertView.findViewById(R.id.tv_username);
             holder.tv_materialName = convertView.findViewById(R.id.tv_materialName);
             // 将视图持有者保存到转换视图当中
@@ -63,7 +63,7 @@ public class BoxListAdapter extends BaseAdapter implements
             holder = (ViewHolder) convertView.getTag();
         }
         BoxInfo planet = mPlanetList.get(position);
-        holder.iv_icon.setImageResource(planet.image); // 显示行星的图片
+//        holder.iv_icon.setImageResource(planet.image); // 显示行星的图片
         holder.tv_username.setText(planet.getBoxName()); // 显示行星的名称
         holder.tv_materialName.setText(planet.getTag()); // 显示行星的描述
         return convertView;
