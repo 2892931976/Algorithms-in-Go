@@ -26,9 +26,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    //Android Support包
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile project(':latte-annotations')
 
     //Fragment依赖
@@ -52,4 +56,12 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.57.android'
     //Log
     compile 'com.orhanobut:logger:2.1.1'
+
+    //Banner依赖
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
+    //数据库依赖
+    compile 'org.greenrobot:greendao-generator:3.2.2'
+    compile 'org.greenrobot:greendao:3.2.2'
 }

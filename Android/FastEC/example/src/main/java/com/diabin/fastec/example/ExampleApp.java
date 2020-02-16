@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.SupportActivity;
 
+import com.facebook.stetho.Stetho;
 import com.flj.latte.app.Latte;
+import com.flj.latte.ec.database.DatabaseManager;
 import com.flj.latte.ec.icon.FontEcModule;
 import com.flj.latte.net.interceptor.DebugInterceptor;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
@@ -35,5 +37,16 @@ public class ExampleApp extends Application {
                 .withApiHost("http://127.0.0.1")
                 .withInterceptor(new DebugInterceptor("index", R.raw.test))
                 .configure();
+//            initStetho();
+
+            DatabaseManager.getInstance().init(this);
     }
+
+//        private void initStetho() {
+//        Stetho.initialize(
+//                Stetho.newInitializerBuilder(this)
+//                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+//                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+//                        .build());
+//    }
 }
