@@ -15,6 +15,7 @@ import com.diabin.latte.ec.R;
 import com.diabin.latte.ec.R2;
 import com.flj.latte.delegates.bottom.BottomItemDelegate;
 //import com.flj.latte.ec.main.index.search.SearchDelegate;
+import com.flj.latte.ec.main.EcBottomDelegate;
 import com.flj.latte.ui.recycler.BaseDecoration;
 import com.flj.latte.ui.refresh.RefreshHandler;
 import com.joanzapata.iconify.widget.IconTextView;
@@ -89,8 +90,8 @@ public class IndexDelegate extends BottomItemDelegate {
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.addItemDecoration
                 (BaseDecoration.create(ContextCompat.getColor(getContext(), R.color.app_background), 15));
-//        final EcBottomDelegate ecBottomDelegate = getParentDelegate();
-//        mRecyclerView.addOnItemTouchListener(IndexItemClickListener.create(ecBottomDelegate));
+        final EcBottomDelegate ecBottomDelegate = getParentDelegate();
+        mRecyclerView.addOnItemTouchListener(IndexItemClickListener.create(ecBottomDelegate));
     }
 
     @Override

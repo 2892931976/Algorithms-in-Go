@@ -19,7 +19,7 @@ import com.flj.latte.ui.launcher.ILauncherListener;
 import com.flj.latte.ui.launcher.OnLauncherFinishTag;
 
 //import cn.jpush.android.api.JPushInterface;
-//import qiu.niorgai.StatusBarCompat;
+import qiu.niorgai.StatusBarCompat;
 
 public class ExampleActivity extends ProxyActivity implements
         ISignListener,
@@ -32,8 +32,8 @@ public class ExampleActivity extends ProxyActivity implements
         if (actionBar != null) {
             actionBar.hide();
         }
-//        Latte.getConfigurator().withActivity(this);
-//        StatusBarCompat.translucentStatusBar(this, true);
+        Latte.getConfigurator().withActivity(this);
+        StatusBarCompat.translucentStatusBar(this, true);
 
     }
 
