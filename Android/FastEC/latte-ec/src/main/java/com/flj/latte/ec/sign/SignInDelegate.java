@@ -15,8 +15,8 @@ import com.diabin.latte.ec.R2;
 import com.flj.latte.net.RestClient;
 import com.flj.latte.net.callback.ISuccess;
 import com.flj.latte.util.log.LatteLogger;
-//import com.flj.latte.wechat.LatteWeChat;
-//import com.flj.latte.wechat.callbacks.IWeChatSignInCallback;
+import com.flj.latte.wechat.LatteWeChat;
+import com.flj.latte.wechat.callbacks.IWeChatSignInCallback;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -46,7 +46,7 @@ public class SignInDelegate extends LatteDelegate {
     void onClickSignIn() {
         if (checkForm()) {
             RestClient.builder()
-                    .url("http://192.168.107.133/user_profile.php")
+                    .url("http://192.168.31.236/user_profile.php")
                     .params("email", mEmail.getText().toString())
                     .params("password", mPassword.getText().toString())
                     .success(new ISuccess() {
@@ -61,18 +61,18 @@ public class SignInDelegate extends LatteDelegate {
         }
     }
 
-//    @OnClick(R2.id.icon_sign_in_wechat)
-//    void onClickWeChat() {
-//        LatteWeChat
-//                .getInstance()
-//                .onSignSuccess(new IWeChatSignInCallback() {
-//                    @Override
-//                    public void onSignInSuccess(String userInfo) {
-//                        Toast.makeText(getContext(), userInfo, Toast.LENGTH_LONG).show();
-//                    }
-//                })
-//                .signIn();
-//    }
+    @OnClick(R2.id.icon_sign_in_wechat)
+    void onClickWeChat() {
+        LatteWeChat
+                .getInstance()
+                .onSignSuccess(new IWeChatSignInCallback() {
+                    @Override
+                    public void onSignInSuccess(String userInfo) {
+                        Toast.makeText(getContext(), userInfo, Toast.LENGTH_LONG).show();
+                    }
+                })
+                .signIn();
+    }
 
     @OnClick(R2.id.tv_link_sign_up)
     void onClickLink() {

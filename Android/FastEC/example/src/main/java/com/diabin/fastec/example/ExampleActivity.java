@@ -10,6 +10,8 @@ import com.flj.latte.app.Latte;
 import com.flj.latte.delegates.LatteDelegate;
 //import com.flj.latte.ec.main.EcBottomDelegate;
 import com.flj.latte.ec.launcher.LauncherDelegate;
+import com.flj.latte.ec.launcher.LauncherScrollDelegate;
+import com.flj.latte.ec.main.EcBottomDelegate;
 import com.flj.latte.ec.sign.ISignListener;
 import com.flj.latte.ec.sign.SignInDelegate;
 import com.flj.latte.ec.sign.SignUpDelegate;
@@ -30,7 +32,7 @@ public class ExampleActivity extends ProxyActivity implements
         if (actionBar != null) {
             actionBar.hide();
         }
-        Latte.getConfigurator().withActivity(this);
+//        Latte.getConfigurator().withActivity(this);
 //        StatusBarCompat.translucentStatusBar(this, true);
 
     }
@@ -67,11 +69,19 @@ public class ExampleActivity extends ProxyActivity implements
         switch (tag) {
             case SIGNED:
                 Toast.makeText(this, "启动结束，用户登录了", Toast.LENGTH_LONG).show();
-                getSupportDelegate().startWithPop(new ExampleDelegate());
+                startWithPop(new EcBottomDelegate());
+//                popTo(ExampleActivity.class,true,new Runnable(){
+//                    @Override
+//                    public void run() {
+//                        start(new ExampleDelegate());
+//                    }
+//                },getFragmentAnimator().getPopExit()); // getFragmentAnimator().getPopExit() 代表popTo时的动画
+
                 break;
             case NOT_SIGNED:
                 Toast.makeText(this, "启动结束，用户没登录", Toast.LENGTH_LONG).show();
-                getSupportDelegate().startWithPop(new SignInDelegate());
+//                getSupportDelegate().start(new EcBottomDelegate());
+                startWithPop(new SignInDelegate());
 
                 break;
             default:

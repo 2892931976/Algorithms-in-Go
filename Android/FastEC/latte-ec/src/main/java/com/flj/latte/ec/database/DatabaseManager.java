@@ -30,7 +30,7 @@ public class DatabaseManager {
     }
 
     private void initDao(Context context) {
-        final ReleaseOpenHelper helper = new ReleaseOpenHelper(context, "fast_ec.db");
+        final ReleaseOpenHelper helper = new ReleaseOpenHelper(context, "fast_ec02.db");
         final Database db = helper.getWritableDb();
         mDaoSession = new DaoMaster(db).newSession();
         mDao = mDaoSession.getUserProfileDao();
