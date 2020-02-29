@@ -1,0 +1,292 @@
+http://news.baidu.com/
+
+{
+"code":0,
+"message":"ok",
+"total":100,
+"page_size":6,
+"data":[
+   {
+       "goodsId":0,
+       "spanSize":4,
+       "banners":[
+           "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1969652902,664018486&fm=26&gp=0.jpg",
+           "https://image.baidu.com/search/detail?ct=503316480&z=undefined&tn=baiduimagedetail&ipn=d&word=jpg&step_word=&ie=utf-8&in=&cl=2&lm=-1&st=undefined&hd=undefined&latest=undefined&copyright=undefined&cs=2417068315,1971337624&os=358725597,2959201171&simid=4159848503,773155935&pn=10&rn=1&di=106590&ln=1770&fr=&fmq=1582165142408_R&fm=&ic=undefined&s=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&is=0,0&istype=0&ist=&jit=&bdtype=0&spn=0&pi=0&gsm=0&hs=2&objurl=http%3A%2F%2Fpic2.cxtuku.com%2F00%2F00%2F25%2Fb35337193cc9.jpg&rpstart=0&rpnum=0&adpicid=0&force=undefined",
+           "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4150297271,2805434681&fm=26&gp=0.jpg"
+       ]
+   },
+   {
+        "goodsId":1,
+        "text":"测试描述1",
+        "imageUrl":"http://192.168.31.236/diqiu.jpg",
+        "spanSize":4
+   },
+      {
+        "goodsId":2,
+        "text":"测试描述2",
+        "imageUrl":"http://192.168.31.236/huoxing.jpg",
+        "spanSize":2
+   },
+      {
+        "goodsId":3,
+        "text":"测试描述3",
+        "imageUrl":"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2126992946,3647951355&fm=26&gp=0.jpg",
+        "spanSize":2
+   }
+]
+}
+
+
+{
+	"code": 0,
+	"message": "ok",
+	"total": 100,
+	"page_size": 6,
+	"data": [{
+			"goodsId": 0,
+			"spanSize": 4,
+			"banners": [
+				"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1969652902,664018486&fm=26&gp=0.jpg",
+				"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1969652902,664018486&fm=26&gp=0.jpg",
+				"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4150297271,2805434681&fm=26&gp=0.jpg"
+			]
+		},
+		{
+			"goodsId": 1,
+			"text": "测试描述1",
+			"imageUrl": "http://192.168.31.236/diqiu.jpg",
+			"spanSize": 4
+		},
+		{
+			"goodsId": 2,
+			"text": "测试描述2",
+			"imageUrl": "http://192.168.31.236/huoxing.jpg",
+			"spanSize": 2
+		},
+		{
+			"goodsId": 3,
+			"text": "测试描述3",
+			"imageUrl": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2126992946,3647951355&fm=26&gp=0.jpg",
+			"spanSize": 2
+		},
+        {
+			"goodsId": 4,
+			"imageUrl": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1807084297,827740491&fm=26&gp=0.jpg",
+			"spanSize": 2
+		},
+        {
+			"goodsId": 4,
+			"imageUrl": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1807084297,827740491&fm=26&gp=0.jpg",
+			"spanSize": 2
+		},
+        {
+			"goodsId": 4,
+			"imageUrl": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1807084297,827740491&fm=26&gp=0.jpg",
+			"spanSize": 2
+		},
+        {
+			"goodsId": 4,
+			"imageUrl": "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1807084297,827740491&fm=26&gp=0.jpg",
+			"spanSize": 2
+		},
+        {
+			"goodsId": 5,
+			"text": "我是野广告",
+			"spanSize": 4
+		},
+        {
+			"goodsId": 5,
+			"text": "测试描述5",
+			"imageUrl": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2126992946,3647951355&fm=26&gp=0.jpg",
+			"spanSize": 4
+		},
+        {
+			"goodsId": 5,
+			"text": "测试描述6",
+			"imageUrl": "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2126992946,3647951355&fm=26&gp=0.jpg",
+			"spanSize": 4
+		},
+        {
+			"goodsId": 5,
+			"text": "我是野广告",
+			"spanSize": 4
+		}
+	]
+}
+
+
+{
+	"code": 0,
+	"message": "ok",
+	"data": {
+    "list":[{
+			"id": 1,
+			"name": "分类1"
+		},
+		{
+			"id": 2,
+			"name": "分类2"
+		},
+		{
+			"id": 3,
+			"name": "分类3"
+		},
+		{
+			"id": 4,
+			"name": "分类4"
+		},
+        {
+			"id": 5,
+			"name": "分类5"
+		},
+        {
+			"id": 6,
+			"name": "分类6"
+		},
+        {
+			"id": 7,
+			"name": "分类7"
+		},
+        {
+			"id": 8,
+			"name": "分类8"
+		},
+        {
+			"id": 9,
+			"name": "分类9"
+		},
+        {
+			"id": 10,
+			"name": "分类10"
+		},
+        {
+			"id": 11,
+			"name": "分类11"
+		},
+        {
+			"id": 12,
+			"name": "分类12"
+		},
+        {
+			"id": 13,
+			"name": "分类13"
+		},
+		{
+			"id": 14,
+			"name": "分类14"
+		},
+        {
+			"id": 15,
+			"name": "分类15"
+		},
+        {
+			"id": 16,
+			"name": "分类16"
+		},
+        {
+			"id": 17,
+			"name": "分类17"
+		},
+        {
+			"id": 18,
+			"name": "分类18"
+		},
+        {
+			"id": 19,
+			"name": "分类19"
+		},
+        {
+			"id": 20,
+			"name": "分类20"
+		}
+	]
+    }
+}
+
+{
+	"code": 0,
+	"message": "ok",
+	"data": {
+		"list": [{
+				"id": 1,
+				"name": "分类1"
+			},
+			{
+				"id": 2,
+				"name": "分类2"
+			},
+			{
+				"id": 3,
+				"name": "分类3"
+			},
+			{
+				"id": 4,
+				"name": "分类4"
+			},
+			{
+				"id": 5,
+				"name": "分类5"
+			},
+			{
+				"id": 6,
+				"name": "分类6"
+			},
+			{
+				"id": 7,
+				"name": "分类7"
+			},
+			{
+				"id": 8,
+				"name": "分类8"
+			},
+			{
+				"id": 9,
+				"name": "分类9"
+			},
+			{
+				"id": 10,
+				"name": "分类10"
+			},
+			{
+				"id": 11,
+				"name": "分类11"
+			},
+			{
+				"id": 12,
+				"name": "分类12"
+			},
+			{
+				"id": 13,
+				"name": "分类13"
+			},
+			{
+				"id": 14,
+				"name": "分类14"
+			},
+			{
+				"id": 15,
+				"name": "分类15"
+			},
+			{
+				"id": 16,
+				"name": "分类16"
+			},
+			{
+				"id": 17,
+				"name": "分类17"
+			},
+			{
+				"id": 18,
+				"name": "分类18"
+			},
+			{
+				"id": 19,
+				"name": "分类19"
+			},
+			{
+				"id": 20,
+				"name": "分类20"
+			}
+		]
+	}
+}

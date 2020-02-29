@@ -10,16 +10,16 @@ import me.yokeyword.fragmentation.SupportActivity;
 import com.diabin.latte.R;
 import com.flj.latte.delegates.LatteDelegate;
 
-import me.yokeyword.fragmentation.ExtraTransaction;
-import me.yokeyword.fragmentation.ISupportActivity;
-import me.yokeyword.fragmentation.SupportActivityDelegate;
+//import me.yokeyword.fragmentation.ExtraTransaction;
+//import me.yokeyword.fragmentation.ISupportActivity;
+//import me.yokeyword.fragmentation.SupportActivityDelegate;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 /**
  * Created by 傅令杰 on 2017/4/2
  */
 
-public abstract class ProxyActivity extends SupportActivity implements ISupportActivity {
+public abstract class ProxyActivity extends SupportActivity {
 
 //    private final SupportActivityDelegate DELEGATE = new SupportActivityDelegate(this);
 

@@ -15,9 +15,9 @@ import com.flj.latte.activities.ProxyActivity;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.yokeyword.fragmentation.ExtraTransaction;
-import me.yokeyword.fragmentation.ISupportFragment;
-import me.yokeyword.fragmentation.SupportFragmentDelegate;
+//import me.yokeyword.fragmentation.ExtraTransaction;
+//import me.yokeyword.fragmentation.ISupportFragment;
+//import me.yokeyword.fragmentation.SupportFragmentDelegate;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
 
@@ -25,7 +25,7 @@ import me.yokeyword.fragmentation_swipeback.SwipeBackFragment;
  * Created by 傅令杰 on 2017/4/2
  */
 
-public abstract class BaseDelegate extends SwipeBackFragment implements ISupportFragment {
+public abstract class BaseDelegate extends SwipeBackFragment {
 
 //    private final SupportFragmentDelegate DELEGATE = new SupportFragmentDelegate(this);
 //    protected FragmentActivity _mActivity = null;

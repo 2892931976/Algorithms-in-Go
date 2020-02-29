@@ -72,7 +72,7 @@ public class SignUpDelegate extends LatteDelegate {
 
     @OnClick(R2.id.tv_link_sign_in)
     void onClickLink() {
-        getSupportDelegate().start(new SignInDelegate());
+        start(new SignInDelegate());
     }
 
     private boolean checkForm() {

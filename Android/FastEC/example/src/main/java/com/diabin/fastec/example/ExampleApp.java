@@ -34,7 +34,8 @@ public class ExampleApp extends Application {
                 .withIcon(new FontAwesomeModule())
                 .withIcon(new FontEcModule())
                 .withLoaderDelayed(1000)
-                .withApiHost("http://192.168.31.236/")
+//                .withApiHost("http://192.168.31.236/")http://192.168.43.189/sort_list.php
+                .withApiHost("http://192.168.43.189/")
                 .withInterceptor(new DebugInterceptor("test100000", R.raw.test))
                 .configure();
             initStetho();
