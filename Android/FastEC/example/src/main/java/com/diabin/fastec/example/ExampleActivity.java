@@ -8,13 +8,9 @@ import android.widget.Toast;
 import com.flj.latte.activities.ProxyActivity;
 import com.flj.latte.app.Latte;
 import com.flj.latte.delegates.LatteDelegate;
-//import com.flj.latte.ec.main.EcBottomDelegate;
-import com.flj.latte.ec.launcher.LauncherDelegate;
-import com.flj.latte.ec.launcher.LauncherScrollDelegate;
 import com.flj.latte.ec.main.EcBottomDelegate;
 import com.flj.latte.ec.sign.ISignListener;
 import com.flj.latte.ec.sign.SignInDelegate;
-import com.flj.latte.ec.sign.SignUpDelegate;
 import com.flj.latte.ui.launcher.ILauncherListener;
 import com.flj.latte.ui.launcher.OnLauncherFinishTag;
 
@@ -51,7 +47,7 @@ public class ExampleActivity extends ProxyActivity implements
 
     @Override
     public LatteDelegate setRootDelegate() {
-        return new LauncherDelegate();
+        return new EcBottomDelegate();
     }
 
     @Override
@@ -68,21 +64,12 @@ public class ExampleActivity extends ProxyActivity implements
     public void onLauncherFinish(OnLauncherFinishTag tag) {
         switch (tag) {
             case SIGNED:
-                Toast.makeText(this, "启动结束，用户登录了", Toast.LENGTH_LONG).show();
-                startWithPop(new EcBottomDelegate());
-//                popTo(ExampleActivity.class,true,new Runnable(){
-//                    @Override
-//                    public void run() {
-//                        start(new ExampleDelegate());
-//                    }
-//                },getFragmentAnimator().getPopExit()); // getFragmentAnimator().getPopExit() 代表popTo时的动画
-
+//                Toast.makeText(this, "启动结束，用户登录了", Toast.LENGTH_LONG).show();
+                getSupportDelegate().startWithPop(new EcBottomDelegate());
                 break;
             case NOT_SIGNED:
-                Toast.makeText(this, "启动结束，用户没登录", Toast.LENGTH_LONG).show();
-//                getSupportDelegate().start(new EcBottomDelegate());
-                startWithPop(new SignInDelegate());
-
+//                Toast.makeText(this, "启动结束，用户没登录", Toast.LENGTH_LONG).show();
+                getSupportDelegate().startWithPop(new SignInDelegate());
                 break;
             default:
                 break;

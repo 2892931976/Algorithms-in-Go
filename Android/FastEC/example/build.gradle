@@ -27,7 +27,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':latte-ec')
     annotationProcessor project(':latte-compiler')
-
+    provided project(':latte-annotations')
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     // 基本操作
     compile 'com.facebook.stetho:stetho:1.5.0'
     // 网络操作--有网络操作添加
