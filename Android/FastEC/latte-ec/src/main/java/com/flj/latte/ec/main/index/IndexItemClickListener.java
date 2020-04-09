@@ -30,7 +30,7 @@ public class IndexItemClickListener extends SimpleClickListener {
 //        final MultipleItemEntity entity = (MultipleItemEntity) baseQuickAdapter.getData().get(position);
 //        final int goodsId = entity.getField(MultipleFields.ID);
         final GoodsDetailDelegate delegate = GoodsDetailDelegate.create();
-        DELEGATE.getSupportDelegate().start(delegate);
+        DELEGATE.start(delegate);
     }
 
     @Override

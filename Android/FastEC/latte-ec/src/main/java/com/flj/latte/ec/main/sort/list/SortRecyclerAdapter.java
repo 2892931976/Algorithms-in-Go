@@ -17,7 +17,7 @@ import com.flj.latte.ui.recycler.MultipleViewHolder;
 
 import java.util.List;
 
-import me.yokeyword.fragmentation.SupportHelper;
+//import me.yokeyword.fragmentation.SupportHelper;
 
 /**
  * Created by 傅令杰
@@ -77,7 +77,6 @@ public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
                 }
 
                 holder.setText(R.id.tv_vertical_item_name, text);
-
                 break;
             default:
                 break;
@@ -90,10 +89,9 @@ public class SortRecyclerAdapter extends MultipleRecyclerAdapter {
     }
 
     private void switchContent(ContentDelegate delegate) {
-        final LatteDelegate contentDelegate =
-                SupportHelper.findFragment(DELEGATE.getChildFragmentManager(), ContentDelegate.class);
+        final LatteDelegate contentDelegate = DELEGATE.findChildFragment(ContentDelegate.class);
         if (contentDelegate != null) {
-            contentDelegate.getSupportDelegate().replaceFragment(delegate, false);
+            contentDelegate.replaceFragment(delegate, false);
         }
     }
 }
