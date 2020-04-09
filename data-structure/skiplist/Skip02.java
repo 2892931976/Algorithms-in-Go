@@ -190,7 +190,7 @@ public class Skip02 {
 		System.out.println("find: " + list.find(12));
 		list.display();
 		list.show(list.lookUp());
-		
+
 		list.delete(12);
 		System.out.println("删除节点值为12后的跳表为：");
 		list.show(list.lookUp());
