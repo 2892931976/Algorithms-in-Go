@@ -37,6 +37,7 @@ public class ExampleApp extends Application {
 //                .withApiHost("http://192.168.31.236/")http://192.168.43.189/sort_list.php
                 .withApiHost("http://192.168.43.189/")
                 .withInterceptor(new DebugInterceptor("test100000", R.raw.test))
+                .withJavascriptInterface("latte")
                 .configure();
             initStetho();
 

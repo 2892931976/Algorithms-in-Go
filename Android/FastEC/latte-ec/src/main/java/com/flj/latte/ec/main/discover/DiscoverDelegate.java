@@ -33,8 +33,8 @@ public class DiscoverDelegate extends BottomItemDelegate {
 //        final WebDelegateImpl delegate = WebDelegateImpl.create("http://192.168.43.189/second.html");
         final WebDelegateImpl delegate = WebDelegateImpl.create("index.html");
         delegate.setTopDelegate(this.getParentDelegate());
-//        getSupportDelegate().loadRootFragment(R.id.web_discovery_container, delegate);
-        loadRootFragment(R.id.web_discovery_container, delegate);
+        getSupportDelegate().loadRootFragment(R.id.web_discovery_container, delegate);
+//        loadRootFragment(R.id.web_discovery_container, delegate);
     }
 
     @Override

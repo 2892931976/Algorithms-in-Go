@@ -1,10 +1,5 @@
 package com.chj.skiplist;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 
@@ -88,26 +83,11 @@ public class Skip10 {
 	     * @param value 值
 	     */
 	    public void insert2(int value) {
-//	    	System.out.println("====null====");
-//	    	System.out.println(head.forwards[0] == null ? 1 : head.forwards[0].toString());
-//	    	System.out.println(head.forwards[0] == null);
-//	    	System.out.println("====null====");
 	        int level = head.forwards[0] == null ? 1 : randomLevel();
-//	        System.out.println("====level===="+head.forwards[0] == null);
-//	        System.out.println("====level===="+level);
-//	        System.out.println("====levelCount===="+levelCount);
 	        // 每次只增加一层，如果条件满足
-//	        而 a = ++i，相当于 i=i+1; a = i;
-//	        而 a = i++，相当于 a = i; i=i+1;
-//	        ++ i 是先加后赋值；
-//	        i ++ 是先赋值后加；
 	        if (level > levelCount) {
 	            level = ++levelCount;
 	        }
-	        
-	        System.out.println("==222==level===="+level);
-	        System.out.println("==222==levelCount===="+levelCount);
-	        
 	        Node newNode = new Node(level);
 	        newNode.data = value;
 	        Node p = head;
@@ -140,8 +120,6 @@ public class Skip10 {
 	     *              可以让每次打印结果不变动，这里是为了便于学习理解
 	     */
 	    public void insert(int value, int level) {
-	    	
-//	    	System.out.println("===head===="+head.toString());
 	        // 随机一个层数
 	        if (level == 0) {
 	            level = randomLevel();
@@ -187,7 +165,6 @@ public class Skip10 {
 	    public void delete(int value) {
 	        Node[] update = new Node[levelCount];
 	        Node p = head;
-	     // 从最大层开始查找，找到前一节点，通过--i，移动到下层再开始查找
 	        for (int i = levelCount - 1; i >= 0; --i) {
 	            while (p.forwards[i] != null && p.forwards[i].data < value) {
 	                p = p.forwards[i];
@@ -224,13 +201,11 @@ public class Skip10 {
 	     */
 	    public void printAll() {
 	        Node p = head;
-	        int i = 0;
 	        while (p.forwards[0] != null) {
 	            System.out.print(p.forwards[0] + " ");
 	            p = p.forwards[0];
-	            i++;
 	        }
-	        System.out.println(i);
+	        System.out.println();
 	    }
 
 	    /**
@@ -271,46 +246,16 @@ public class Skip10 {
 	        }
 
 	        @Override
-//	        public String toString() {
-//	            StringBuilder builder = new StringBuilder();
-//	            builder.append("{ data: ");
-//	            builder.append(data);
-//	            builder.append("; levels: ");
-//	            builder.append(maxLevel);
-//	            builder.append(" }");
-//	            return builder.toString();
-//	        }
-//	        
-			public String toString() {
-				return "[data=" + data + ", maxLevel=" + maxLevel + ", next=" + forwards.length + " ] -->";
-			}
+	        public String toString() {
+	            StringBuilder builder = new StringBuilder();
+	            builder.append("{ data: ");
+	            builder.append(data);
+	            builder.append("; levels: ");
+	            builder.append(maxLevel);
+	            builder.append(" }");
+	            return builder.toString();
+	        }
 	    }
-	    
-		//遍历跳表  限第一层
-		public Map<Integer, List<Node>> lookUp(){
-			Map<Integer, List<Node>> map = new HashMap<Integer, List<Node>>();
-			List<Node> nodes;
-			for(int i = 0; i < head.forwards.length; i ++){
-				nodes = new ArrayList<Node>();
-				for(Node current = head; current != null; current = current.forwards[i]){
-					nodes.add(current);
-				}
-				map.put(i,nodes);
-			}
-			return map;
-		}
-	 
-		public void show(Map<Integer, List<Node>> map){
-			for(int i = map.size() - 1; i >= 0; i --){
-				List<Node> list = map.get(i);
-				StringBuffer sb = new StringBuffer("第"+i+"层:");
-				
-				for(Iterator<Node> it = list.iterator(); it.hasNext();){
-					sb.append(it.next().toString());
-				}
-				System.out.println(sb.substring(0,sb.toString().lastIndexOf("-->")));
-			}
-		}
 
 	    public static void main(String[] args) {
 	    	Skip10 list = new Skip10();
@@ -322,9 +267,8 @@ public class Skip10 {
 	        list.insert(6, 4);
 	        list.insert(8, 5);
 	        list.insert(7, 4);
-	        list.show(list.lookUp());
-//	        list.printAll_beautiful();
-//	        list.printAll();
+	        list.printAll_beautiful();
+	        list.printAll();
 	        /**
 	         * 结果如下：
 	         * 									    null:15-------
@@ -346,8 +290,6 @@ public class Skip10 {
 	         * { data: 1; levels: 3 } { data: 2; levels: 3 } { data: 3; levels: 2 } { data: 4; levels: 4 }
 	         * { data: 5; levels: 10 } { data: 6; levels: 4 } { data: 7; levels: 4 } { data: 8; levels: 5 }
 	         */
-	        
-	        System.out.println("优化后");
 	        // 优化后insert()
 
 	        Skip10 list2 = new Skip10();
@@ -360,11 +302,11 @@ public class Skip10 {
 	        list2.insert2(4);
 	        list2.insert2(5);
 	        System.out.println();
-//	        list2.printAll_beautiful();
-	        list2.show(list2.lookUp());
-	        System.out.println(list2.find(8));
-	        System.out.println(list2.find(9));
+	        list2.printAll_beautiful();
+
+
 	    }
+
 	}
 
 //}
