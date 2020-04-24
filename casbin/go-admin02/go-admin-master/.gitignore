@@ -1,0 +1,8 @@
+.idea
+static/uploadfile
+main.exe
+go-admin
+temp/
+!temp
+vendor
+config/settings.dev.yml
