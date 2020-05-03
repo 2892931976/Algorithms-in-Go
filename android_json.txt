@@ -290,3 +290,195 @@ http://news.baidu.com/
 		]
 	}
 }
+
+{
+	"code": 0,
+	"message": "ok",
+	"data": [
+		{
+			"id": 1,
+			"section": "标题1",
+			"goods": [
+		{
+			"goods_id": 3,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌1"
+		},
+		{
+			"goods_id": 4,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌2"
+		},
+
+		
+		{
+			"goods_id": 5,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌3"
+		},
+		{
+			"goods_id": 6,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌4"
+		}
+       ]
+		},
+	
+		{
+			"id": 2,
+			"section": "标题2",
+			"goods": [
+		{
+			"goods_id": 3,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌1"
+		},
+		{
+			"goods_id": 4,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌2"
+		},
+		{
+			"goods_id": 5,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌3"
+		},
+		{
+			"goods_id": 6,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌4"
+		},
+		{
+			"goods_id": 7,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌5"
+		},
+		{
+			"goods_id": 8,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌6"
+		}
+       ]
+		},
+
+				{
+			"id": 3,
+			"section": "标题3",
+			"goods": [
+		{
+			"goods_id": 3,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌1"
+		},
+		{
+			"goods_id": 4,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌2"
+		},
+
+		
+		{
+			"goods_id": 5,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌3"
+		},
+		{
+			"goods_id": 6,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌4"
+		}
+       ]
+		},
+
+				{
+			"id": 4,
+			"section": "标题4",
+			"goods": [
+		{
+			"goods_id": 3,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌1"
+		},
+		{
+			"goods_id": 4,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌2"
+		},
+
+		
+		{
+			"goods_id": 5,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌3"
+		},
+		{
+			"goods_id": 6,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌4"
+		},
+		{
+			"goods_id": 5,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌3"
+		},
+		{
+			"goods_id": 6,
+			"goods_thumb": "http://192.168.43.189/diqiu.jpg",
+			"goods_name": "品牌4"
+		}
+       ]
+		}
+	]
+}
+
+
+{
+	"code": 0,
+	"message": "ok",
+	"data": [
+		{
+			"title": "商品标题1",
+			"desc": "商品描述1",
+			"id": 1,
+			"price": 1.00,
+			"count": 2,
+			"thumb": "http://192.168.43.189/diqiu.jpg"
+		},
+		{
+			"title": "商品标题2",
+			"desc": "商品描述2",
+			"id": 3,
+			"price": 2.00,
+			"count": 3,
+			"thumb": "http://192.168.43.189/diqiu.jpg"
+		}
+	]
+}
+
+{
+	"code": 0,
+	"message": "ok",
+	"data": [
+		{
+			"id": 1,
+			"thumb": "http://192.168.31.236/diqiu.jpg",
+			"title": "商品标题1",
+			"price": 1.00,
+			"time": "2017-1-1"	
+		},
+		{
+			"id": 2,
+			"thumb": "http://192.168.31.236/huoxing.jpg",
+			"title": "商品标题2",
+			"price": 2.00,
+			"time": "2017-1-1"	
+		},
+		{
+			"id": 3,
+			"thumb": "http://192.168.31.236/diqiu.jpg",
+			"title": "商品标题3",
+			"price": 3.00,
+			"time": "2017-1-1"	
+		}
+	]
+}
